@@ -62,7 +62,7 @@ public interface AsyncCallback {
          * @param path The path that we passed to asynchronous calls.
          * @param ctx  Whatever context object that we passed to
          *             asynchronous calls.
-         * @param stat {@link org.apache.zookeeper.data.Stat} object of
+         * @param stat {@link Stat} object of
          *             the node on given path.
          */
         public void processResult(int rc, String path, Object ctx, Stat stat);
@@ -94,7 +94,7 @@ public interface AsyncCallback {
          *             asynchronous calls.
          * @param data The {@link org.apache.zookeeper.server.DataNode#data}
          *             of the node.
-         * @param stat {@link org.apache.zookeeper.data.Stat} object of
+         * @param stat {@link Stat} object of
          *             the node on given path.
          */
         public void processResult(int rc, String path, Object ctx, byte data[],
@@ -127,7 +127,7 @@ public interface AsyncCallback {
          *             asynchronous calls.
          * @param acl  ACL Id in
          *             {@link org.apache.zookeeper.ZooDefs.Ids}.
-         * @param stat {@link org.apache.zookeeper.data.Stat} object of
+         * @param stat {@link Stat} object of
          *             the node on given path.
          */
         public void processResult(int rc, String path, Object ctx,
@@ -180,7 +180,7 @@ public interface AsyncCallback {
          *                 asynchronous calls.
          * @param children An unordered array of children of the node on
          *                 given path.
-         * @param stat     {@link org.apache.zookeeper.data.Stat} object of
+         * @param stat     {@link Stat} object of
          *                 the node on given path.
          */
         public void processResult(int rc, String path, Object ctx,
@@ -203,7 +203,7 @@ public interface AsyncCallback {
          * @param name The name of the Znode that was created.
          *             On success, <i>name</i> and <i>path</i> are usually
          *             equal, unless a sequential node has been created.
-         * @param stat {@link org.apache.zookeeper.data.Stat} object of
+         * @param stat {@link Stat} object of
          *             the node on given path.
          */
         public void processResult(int rc, String path, Object ctx,

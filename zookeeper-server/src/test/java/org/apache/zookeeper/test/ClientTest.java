@@ -49,7 +49,6 @@ import org.apache.zookeeper.proto.ReplyHeader;
 import org.apache.zookeeper.proto.RequestHeader;
 import org.apache.zookeeper.server.PrepRequestProcessor;
 import org.apache.zookeeper.server.util.OSMXBean;
-import static org.apache.zookeeper.test.ClientBase.CONNECTION_TIMEOUT;
 import org.junit.Assert;
 import org.junit.Test;
 import org.slf4j.Logger;

@@ -19,7 +19,6 @@
 package org.apache.zookeeper.server;
 
 import java.io.BufferedWriter;
-import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.Writer;
@@ -36,7 +35,6 @@ import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import org.apache.jute.BinaryInputArchive;
-import org.apache.jute.BinaryOutputArchive;
 import org.apache.jute.Record;
 import org.apache.zookeeper.WatchedEvent;
 import org.apache.zookeeper.data.Id;
@@ -681,7 +679,7 @@ public class NIOServerCnxn extends ServerCnxn {
     /*
      * (non-Javadoc)
      *
-     * @see org.apache.zookeeper.server.ServerCnxnIface#sendResponse(org.apache.zookeeper.proto.ReplyHeader,
+     * @see org.apache.zookeeper.server.ServerCnxnIface#sendResponse(org.apache.ReplyHeader,
      *      org.apache.jute.Record, java.lang.String)
      */
     @Override
@@ -703,7 +701,7 @@ public class NIOServerCnxn extends ServerCnxn {
     /*
      * (non-Javadoc)
      *
-     * @see org.apache.zookeeper.server.ServerCnxnIface#process(org.apache.zookeeper.proto.WatcherEvent)
+     * @see org.apache.zookeeper.server.ServerCnxnIface#process(org.apache.WatcherEvent)
      */
     @Override
     public void process(WatchedEvent event) {

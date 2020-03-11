@@ -42,7 +42,6 @@ import org.apache.zookeeper.server.Request;
 import org.apache.zookeeper.server.RequestProcessor;
 import org.apache.zookeeper.server.SessionTracker;
 import org.apache.zookeeper.server.ZooKeeperServer;
-import org.apache.zookeeper.server.quorum.CommitProcessor;
 import org.apache.zookeeper.test.ClientBase;
 
 import org.junit.After;

@@ -110,7 +110,7 @@ module org.apache.zookeeper.proto {
         long curConfigId;
     }
     class SetDataResponse {
-        org.apache.zookeeper.data.Stat stat;
+        org.apache.Stat stat;
     }
     class GetSASLRequest {
         buffer token;
@@ -124,13 +124,13 @@ module org.apache.zookeeper.proto {
     class CreateRequest {
         ustring path;
         buffer data;
-        vector<org.apache.zookeeper.data.ACL> acl;
+        vector<org.apache.ACL> acl;
         int flags;
     }
     class CreateTTLRequest {
         ustring path;
         buffer data;
-        vector<org.apache.zookeeper.data.ACL> acl;
+        vector<org.apache.ACL> acl;
         int flags;
         long ttl;
     }
@@ -171,11 +171,11 @@ module org.apache.zookeeper.proto {
     }
     class SetACLRequest {
         ustring path;
-        vector<org.apache.zookeeper.data.ACL> acl;
+        vector<org.apache.ACL> acl;
         int version;
     }
     class SetACLResponse {
-        org.apache.zookeeper.data.Stat stat;
+        org.apache.Stat stat;
     }
     class WatcherEvent {
         int type;  // event type
@@ -190,29 +190,29 @@ module org.apache.zookeeper.proto {
     }
     class Create2Response {
         ustring path;
-        org.apache.zookeeper.data.Stat stat;
+        org.apache.Stat stat;
     }
     class ExistsRequest {
         ustring path;
         boolean watch;
     }
     class ExistsResponse {
-        org.apache.zookeeper.data.Stat stat;
+        org.apache.Stat stat;
     }
     class GetDataResponse {
         buffer data;
-        org.apache.zookeeper.data.Stat stat;
+        org.apache.Stat stat;
     }
     class GetChildrenResponse {
         vector<ustring> children;
     }
     class GetChildren2Response {
         vector<ustring> children;
-        org.apache.zookeeper.data.Stat stat;
+        org.apache.Stat stat;
     }
     class GetACLResponse {
-        vector<org.apache.zookeeper.data.ACL> acl;
-        org.apache.zookeeper.data.Stat stat;
+        vector<org.apache.ACL> acl;
+        org.apache.Stat stat;
     }
     class CheckWatchesRequest {
         ustring path;
@@ -234,7 +234,7 @@ module org.apache.zookeeper.server.quorum {
         int type; // Request, Ack, Commit, Ping
         long zxid;
         buffer data; // Only significant when type is request
-        vector<org.apache.zookeeper.data.Id> authinfo;
+        vector<org.apache.Id> authinfo;
     }
     class QuorumAuthPacket {
         long magic;
@@ -262,27 +262,27 @@ module org.apache.zookeeper.txn {
     class CreateTxnV0 {
         ustring path;
         buffer data;
-        vector<org.apache.zookeeper.data.ACL> acl;
+        vector<org.apache.ACL> acl;
         boolean ephemeral;
     }
     class CreateTxn {
         ustring path;
         buffer data;
-        vector<org.apache.zookeeper.data.ACL> acl;
+        vector<org.apache.ACL> acl;
         boolean ephemeral;
         int parentCVersion;
     }
     class CreateTTLTxn {
         ustring path;
         buffer data;
-        vector<org.apache.zookeeper.data.ACL> acl;
+        vector<org.apache.ACL> acl;
         int parentCVersion;
         long ttl;
     }
     class CreateContainerTxn {
         ustring path;
         buffer data;
-        vector<org.apache.zookeeper.data.ACL> acl;
+        vector<org.apache.ACL> acl;
         int parentCVersion;
     }
     class DeleteTxn {
@@ -299,7 +299,7 @@ module org.apache.zookeeper.txn {
     }
     class SetACLTxn {
         ustring path;
-        vector<org.apache.zookeeper.data.ACL> acl;
+        vector<org.apache.ACL> acl;
         int version;
     }
     class SetMaxChildrenTxn {
@@ -317,6 +317,6 @@ module org.apache.zookeeper.txn {
         buffer data;
     }
     class MultiTxn {
-        vector<org.apache.zookeeper.txn.Txn> txns;
+        vector<org.apache.Txn> txns;
     }
 }

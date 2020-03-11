@@ -47,7 +47,7 @@
       <param name="path" type="java.lang.String"/>
       <param name="ctx" type="java.lang.Object"/>
       <param name="acl" type="java.util.List"/>
-      <param name="stat" type="org.apache.zookeeper.data.Stat"/>
+      <param name="stat" type="org.apache.org.apache.zookeeper.data.Stat"/>
     </method>
   </interface>
   <!-- end interface org.apache.zookeeper.AsyncCallback.ACLCallback -->
@@ -80,7 +80,7 @@
       <param name="path" type="java.lang.String"/>
       <param name="ctx" type="java.lang.Object"/>
       <param name="data" type="byte[]"/>
-      <param name="stat" type="org.apache.zookeeper.data.Stat"/>
+      <param name="stat" type="org.apache.org.apache.zookeeper.data.Stat"/>
     </method>
   </interface>
   <!-- end interface org.apache.zookeeper.AsyncCallback.DataCallback -->
@@ -96,7 +96,7 @@
       <param name="rc" type="int"/>
       <param name="path" type="java.lang.String"/>
       <param name="ctx" type="java.lang.Object"/>
-      <param name="stat" type="org.apache.zookeeper.data.Stat"/>
+      <param name="stat" type="org.apache.org.apache.zookeeper.data.Stat"/>
     </method>
   </interface>
   <!-- end interface org.apache.zookeeper.AsyncCallback.StatCallback -->
@@ -197,11 +197,11 @@
  @throws IOException]]>
       </doc>
     </method>
-    <method name="submitRequest" return="org.apache.zookeeper.proto.ReplyHeader"
+    <method name="submitRequest" return="org.apache.org.apache.zookeeper.proto.ReplyHeader"
       abstract="false" native="false" synchronized="false"
       static="false" final="false" visibility="public"
       deprecated="not deprecated">
-      <param name="h" type="org.apache.zookeeper.proto.RequestHeader"/>
+      <param name="h" type="org.apache.org.apache.zookeeper.proto.RequestHeader"/>
       <param name="request" type="org.apache.jute.Record"/>
       <param name="response" type="org.apache.jute.Record"/>
       <param name="watchRegistration" type="org.apache.zookeeper.ZooKeeper.WatchRegistration"/>
@@ -1410,7 +1410,7 @@
     abstract="false"
     static="false" final="false" visibility="public"
     deprecated="not deprecated">
-    <implements name="org.apache.zookeeper.version.Info"/>
+    <implements name="org.apache.org.apache.zookeeper.version.Info"/>
     <constructor name="Version"
       static="false" final="false" visibility="public"
       deprecated="not deprecated">
@@ -1476,7 +1476,7 @@
       <![CDATA[Create a WatchedEvent with specified type, state and path]]>
       </doc>
     </constructor>
-    <constructor name="WatchedEvent" type="org.apache.zookeeper.proto.WatcherEvent"
+    <constructor name="WatchedEvent" type="org.apache.org.apache.zookeeper.proto.WatcherEvent"
       static="false" final="false" visibility="public"
       deprecated="not deprecated">
       <doc>
@@ -1503,7 +1503,7 @@
       static="false" final="false" visibility="public"
       deprecated="not deprecated">
     </method>
-    <method name="getWrapper" return="org.apache.zookeeper.proto.WatcherEvent"
+    <method name="getWrapper" return="org.apache.org.apache.zookeeper.proto.WatcherEvent"
       abstract="false" native="false" synchronized="false"
       static="false" final="false" visibility="public"
       deprecated="not deprecated">
@@ -1703,7 +1703,7 @@
   <interface name="ZooDefs.Ids"    abstract="true"
     static="true" final="false" visibility="public"
     deprecated="not deprecated">
-    <field name="ANYONE_ID_UNSAFE" type="org.apache.zookeeper.data.Id"
+    <field name="ANYONE_ID_UNSAFE" type="org.apache.org.apache.zookeeper.data.Id"
       transient="false" volatile="false"
       static="true" final="true" visibility="public"
       deprecated="not deprecated">
@@ -1711,7 +1711,7 @@
       <![CDATA[This Id represents anyone.]]>
       </doc>
     </field>
-    <field name="AUTH_IDS" type="org.apache.zookeeper.data.Id"
+    <field name="AUTH_IDS" type="org.apache.org.apache.zookeeper.data.Id"
       transient="false" volatile="false"
       static="true" final="true" visibility="public"
       deprecated="not deprecated">
@@ -2131,7 +2131,7 @@
  @see #delete(String, int)]]>
       </doc>
     </method>
-    <method name="exists" return="org.apache.zookeeper.data.Stat"
+    <method name="exists" return="org.apache.org.apache.zookeeper.data.Stat"
       abstract="false" native="false" synchronized="false"
       static="false" final="false" visibility="public"
       deprecated="not deprecated">
@@ -2157,7 +2157,7 @@
  @throws IllegalArgumentException if an invalid path is specified]]>
       </doc>
     </method>
-    <method name="exists" return="org.apache.zookeeper.data.Stat"
+    <method name="exists" return="org.apache.org.apache.zookeeper.data.Stat"
       abstract="false" native="false" synchronized="false"
       static="false" final="false" visibility="public"
       deprecated="not deprecated">
@@ -2220,7 +2220,7 @@
       deprecated="not deprecated">
       <param name="path" type="java.lang.String"/>
       <param name="watcher" type="org.apache.zookeeper.Watcher"/>
-      <param name="stat" type="org.apache.zookeeper.data.Stat"/>
+      <param name="stat" type="org.apache.org.apache.zookeeper.data.Stat"/>
       <exception name="KeeperException" type="org.apache.zookeeper.KeeperException"/>
       <exception name="InterruptedException" type="java.lang.InterruptedException"/>
       <doc>
@@ -2249,7 +2249,7 @@
       deprecated="not deprecated">
       <param name="path" type="java.lang.String"/>
       <param name="watch" type="boolean"/>
-      <param name="stat" type="org.apache.zookeeper.data.Stat"/>
+      <param name="stat" type="org.apache.org.apache.zookeeper.data.Stat"/>
       <exception name="KeeperException" type="org.apache.zookeeper.KeeperException"/>
       <exception name="InterruptedException" type="java.lang.InterruptedException"/>
       <doc>
@@ -2301,7 +2301,7 @@
  @see #getData(String, boolean, Stat)]]>
       </doc>
     </method>
-    <method name="setData" return="org.apache.zookeeper.data.Stat"
+    <method name="setData" return="org.apache.org.apache.zookeeper.data.Stat"
       abstract="false" native="false" synchronized="false"
       static="false" final="false" visibility="public"
       deprecated="not deprecated">
@@ -2360,7 +2360,7 @@
       static="false" final="false" visibility="public"
       deprecated="not deprecated">
       <param name="path" type="java.lang.String"/>
-      <param name="stat" type="org.apache.zookeeper.data.Stat"/>
+      <param name="stat" type="org.apache.org.apache.zookeeper.data.Stat"/>
       <exception name="KeeperException" type="org.apache.zookeeper.KeeperException"/>
       <exception name="InterruptedException" type="java.lang.InterruptedException"/>
       <doc>
@@ -2384,7 +2384,7 @@
       static="false" final="false" visibility="public"
       deprecated="not deprecated">
       <param name="path" type="java.lang.String"/>
-      <param name="stat" type="org.apache.zookeeper.data.Stat"/>
+      <param name="stat" type="org.apache.org.apache.zookeeper.data.Stat"/>
       <param name="cb" type="org.apache.zookeeper.AsyncCallback.ACLCallback"/>
       <param name="ctx" type="java.lang.Object"/>
       <doc>
@@ -2394,7 +2394,7 @@
  @see #getACL(String, Stat)]]>
       </doc>
     </method>
-    <method name="setACL" return="org.apache.zookeeper.data.Stat"
+    <method name="setACL" return="org.apache.org.apache.zookeeper.data.Stat"
       abstract="false" native="false" synchronized="false"
       static="false" final="false" visibility="public"
       deprecated="not deprecated">

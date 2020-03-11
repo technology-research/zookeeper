@@ -70,12 +70,12 @@
   </Match>
 
   <Match>
-    <Class name="org.apache.zookeeper.server.quorum.QuorumPacket" />
+    <Class name="org.apache.org.apache.zookeeper.server.quorum.QuorumPacket" />
        <Bug code="EI2, EI" />
   </Match>
 
   <Match>
-      <Class name="org.apache.zookeeper.server.quorum.QuorumAuthPacket" />
+      <Class name="org.apache.org.apache.zookeeper.server.quorum.QuorumAuthPacket" />
       <Bug code="EI2, EI" />
   </Match>
 

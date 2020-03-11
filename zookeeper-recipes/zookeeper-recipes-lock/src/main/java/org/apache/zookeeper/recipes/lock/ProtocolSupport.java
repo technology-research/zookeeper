@@ -25,7 +25,6 @@ import org.apache.zookeeper.ZooDefs;
 import org.apache.zookeeper.ZooKeeper;
 import org.apache.zookeeper.data.ACL;
 import org.apache.zookeeper.data.Stat;
-import org.apache.zookeeper.recipes.lock.ZooKeeperOperation;
 
 import java.util.List;
 import java.util.concurrent.atomic.AtomicBoolean;

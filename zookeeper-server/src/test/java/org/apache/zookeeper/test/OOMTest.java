@@ -152,7 +152,7 @@ public class OOMTest extends ZKTestCase implements Watcher {
     /*
      * (non-Javadoc)
      *
-     * @see org.apache.zookeeper.Watcher#process(org.apache.zookeeper.proto.WatcherEvent)
+     * @see org.apache.zookeeper.Watcher#process(org.apache.WatcherEvent)
      */
     public void process(WatchedEvent event) {
         System.err.println("Got event " + event.getType() + " "

@@ -138,6 +138,7 @@ public class ZooKeeperMain {
     }
 
     private class MyWatcher implements Watcher {
+        @Override
         public void process(WatchedEvent event) {
             if (getPrintWatches()) {
                 ZooKeeperMain.printMessage("WATCHER::");

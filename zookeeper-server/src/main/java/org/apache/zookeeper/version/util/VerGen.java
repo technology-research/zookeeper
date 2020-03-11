@@ -123,7 +123,7 @@ public class VerGen {
     }
 
     /**
-     * Emits a org.apache.zookeeper.version.Info interface file with version and
+     * Emits a org.apache.Info interface file with version and
      * revision information constants set to the values passed in as command
      * line parameters. The file is created in the current directory. <br>
      * Usage: java org.apache.zookeeper.version.util.VerGen maj.min.micro[-qualifier]

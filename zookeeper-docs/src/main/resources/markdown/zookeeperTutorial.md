@@ -378,7 +378,7 @@ Start a barrier with 2 participants (start as many times as many participants yo
     import org.apache.zookeeper.Watcher;
     import org.apache.zookeeper.ZooKeeper;
     import org.apache.zookeeper.ZooDefs.Ids;
-    import org.apache.zookeeper.data.Stat;
+    import org.apache.Stat;
 
     public class SyncPrimitive implements Watcher {
 

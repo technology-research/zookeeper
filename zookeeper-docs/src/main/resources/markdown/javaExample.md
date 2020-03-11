@@ -413,7 +413,7 @@ function, when DataMonitor gets an event for a znode, it calls`ZooKeeper.exists(
         /***************************************************************************
          * We do process any events ourselves, we just need to forward them on.
          *
-         * @see org.apache.zookeeper.Watcher#process(org.apache.zookeeper.proto.WatcherEvent)
+         * @see org.apache.zookeeper.Watcher#process(org.apache.WatcherEvent)
          */
         public void process(WatchedEvent event) {
             dm.process(event);
@@ -516,7 +516,7 @@ function, when DataMonitor gets an event for a znode, it calls`ZooKeeper.exists(
     import org.apache.zookeeper.ZooKeeper;
     import org.apache.zookeeper.AsyncCallback.StatCallback;
     import org.apache.zookeeper.KeeperException.Code;
-    import org.apache.zookeeper.data.Stat;
+    import org.apache.Stat;
 
     public class DataMonitor implements Watcher, StatCallback {
 

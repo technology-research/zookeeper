@@ -19,8 +19,9 @@
 package org.apache.zookeeper;
 
 import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
+import org.apache.zookeeper.version.Info;
 
-public class Version implements org.apache.zookeeper.version.Info {
+public class Version implements Info {
 
     public static String getRevisionHash() {
         return REVISION_HASH;

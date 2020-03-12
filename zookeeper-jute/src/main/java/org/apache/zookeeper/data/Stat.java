@@ -21,18 +21,70 @@ package org.apache.zookeeper.data;
 
 import org.apache.jute.*;
 import org.apache.yetus.audience.InterfaceAudience;
+
+/**
+ * 节点存储的状态信息
+ */
 @InterfaceAudience.Public
 public class Stat implements Record {
+
+  /**
+   * 节点被创建时的事务id (zk中，创建和删除节点，节点数据内容更新，客户端会话链接断开或者建立都算是事务操作，要和数据库区分开（数据库是狭义上的事务）)
+   * create zxid
+   */
   private long czxid;
+
+  /**
+   * 节点最后一次被更新（存储的数据）的事务id
+   * modified zxid
+   */
   private long mzxid;
+
+  /**
+   * 节点创建时间
+   */
   private long ctime;
+
+  /**
+   * 节点最后一次的修改时（存储的数据）
+   */
   private long mtime;
+
+  /**
+   * 数据内容的版本号（zk的版本其实表示的是变更次数），zk通过版本来保证原子性
+   * 如果值为0，表示的意思是自从这个节点创建以来，被修改的次数是0次，如果对内容进行修（无论修改前后的值是否相同，只要执行了修改操作就算一次），则version值变为1
+   */
   private int version;
+
+  /**
+   * 子节点的版本号
+   */
   private int cversion;
+
+  /**
+   * 节点的ACL变更版本号
+   */
   private int aversion;
+  /**
+   * 创建该节点会话id
+   * 1，如果该节点是临时节点，那么值为会话sessionId
+   * 2，如果节点是永久节点，那么值为0
+   */
   private long ephemeralOwner;
+
+  /**
+   * 存储的数据大（长度），该数据类型是int，也就意味着，子节点的最大数目是2^30
+   */
   private int dataLength;
+
+  /**
+   * 字节点数量
+   */
   private int numChildren;
+
+  /**
+   * 子节点列表最后一次变更时的事务id（节点创建和删除才会修改这个值，内容修改不会影响这个值）
+   */
   private long pzxid;
   public Stat() {
   }
@@ -160,7 +212,7 @@ public class Stat implements Record {
     try {
       java.io.ByteArrayOutputStream s =
         new java.io.ByteArrayOutputStream();
-      CsvOutputArchive a_ = 
+      CsvOutputArchive a_ =
         new CsvOutputArchive(s);
       a_.startRecord(this,"");
     a_.writeLong(czxid,"czxid");

@@ -30,8 +30,17 @@ import org.apache.zookeeper.Watcher.Event.KeeperState;
  */
 @InterfaceAudience.Public
 public class WatchedEvent {
+    /**
+     * 通知状态
+     */
     final private KeeperState keeperState;
+    /**
+     * 时间类型
+     */
     final private EventType eventType;
+    /**
+     * 节点路径
+     */
     private String path;
     
     /**
